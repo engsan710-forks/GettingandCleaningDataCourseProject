@@ -94,9 +94,10 @@ create_tidy_data <- function() {
   ## and each subject.
   library(dplyr)
   average_activity_subject <- summarise_each(
-    group_by(mean_std_columns, subjectid, activity),
+    group_by(mean_std_columns, activity, subjectid),
     funs(mean))
-  write.table(average_activity_subject, "tidy_data.txt")
+  write.table(average_activity_subject, "tidy_data.txt", row.name=FALSE)
+
 
 }
 
