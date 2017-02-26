@@ -51,7 +51,6 @@ Generated using package: memisc and function codebook()
    Factor with 6 levels
 
 
-
 | Values |        Labels      |  N  | Percent |
 |-------:|-------------------:|----:|--------:|
 | _1_    |    'LAYING'        | 30  | 16.7    |
@@ -60,6 +59,7 @@ Generated using package: memisc and function codebook()
 | _4_    |    'WALKING'       | 30  | 16.7    |
 | _5_    |'WALKING_DOWNSTAIRS'| 30  | 16.7    |
 | _6_    | 'WALKING_UPSTAIRS' | 30  | 16.7    |
+
 
 --------------------------------------------------------------------------------------------------------------------
 
