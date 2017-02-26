@@ -21,10 +21,10 @@
 ##################################################################
 create_tidy_data <- function() {
   ## Download the zip file:
-  #download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", "UCI_HAR_Dataset.zip", "curl")
+  download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", "UCI_HAR_Dataset.zip", "curl")
 
   ## unzip file
-  #unzip("UCI_HAR_Dataset.zip", exdir = "uci_har_dataset", junkpaths = TRUE)
+  unzip("UCI_HAR_Dataset.zip", exdir = "uci_har_dataset", junkpaths = TRUE)
 
   ## read the column names
   column_names_orig <- read.table("./uci_har_dataset/features.txt", header = FALSE, stringsAsFactors = FALSE )[,2]
