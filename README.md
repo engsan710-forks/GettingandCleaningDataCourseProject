@@ -10,9 +10,9 @@ This project contains the required artifacts for the _Peer-graded Assignment: Ge
 
 
 This project is the outcome of reading the following links:
-* Class project: https://www.coursera.org/learn/data-cleaning/peer/FIZtT/getting-and-cleaning-data-course-project
-* Getting and Cleaning the Assignment: https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/
-* Tidy Data: http://vita.had.co.nz/papers/tidy-data.pdf
+* [Class project](https://www.coursera.org/learn/data-cleaning/peer/FIZtT/getting-and-cleaning-data-course-project)
+* [Getting and Cleaning the Assignment](https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/)
+* [Tidy Data](http://vita.had.co.nz/papers/tidy-data.pdf)
 
 ## The Data:
 
@@ -25,7 +25,8 @@ Here are the data for the project:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 ## The Assignment:
-Create one R script called run_analysis.R that does the following.
+
+Create one R script called run_analysis.R that does the following:
 
 1. Merges the training and the test sets to create one data set.
 2. Extracts only the measurements on the mean and standard deviation for each measurement.
@@ -33,7 +34,7 @@ Create one R script called run_analysis.R that does the following.
 4. Appropriately labels the data set with descriptive variable names.
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-The script will download the zip file and unpack it in a directory named: `uci_har_dataset` under the current directory, then read into R the relevant data. Based on [Getting and Cleaning the Assignment][bb28d75f] the only files needed were `subject_*.txt, y_*.txt and X_*.txt` under test and train. The following files were read:
+The script will download the zip file and unpack it in a directory named: `uci_har_dataset` under the current directory, then read into R the relevant data. Based on [Getting and Cleaning the Assignment](https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/) the only files needed were `subject_*.txt, y_*.txt and X_*.txt` under test and train. The following files were read:
 * features.txt - names of the columns
 * activity_labels.txt - activity numeric value and label mapping
 * subject_test.txt - subject id assigned
@@ -134,4 +135,9 @@ average_activity_subject <- summarise_each(
   group_by(mean_std_columns, subjectid, activity),
   funs(mean))
 write.table(average_activity_subject, "tidy_data.txt")
+```
+To read the tidy_data.txt file use the following code:
+```
+data <- read.table(file_path, header = TRUE)
+View(data)
 ```
