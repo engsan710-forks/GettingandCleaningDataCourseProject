@@ -24,13 +24,15 @@ www.smartlab.ws
 ## Variable information:
 
 Generated using package: memisc and function codebook()
+
+
 ====================================================================================================================
 
    ### subjectid
 
 --------------------------------------------------------------------------------------------------------------------
 
-   Storage mode: integer`
+   Storage mode: `integer`
 
        Min.:   1.000
        1st Qu.:   8.000
